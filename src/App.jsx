@@ -596,18 +596,21 @@ function Layout({ children }) {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-brandBlue via-brandPurple to-brandPink text-white flex flex-col items-center justify-center">
-      <h1 className="text-5xl font-extrabold mb-6">
-        Welcome to PBMINDS Technologies
-      </h1>
-      <p className="text-lg max-w-2xl text-center mb-8">
-        We provide software development, consulting, and technology services to
-        help businesses grow faster.
-      </p>
-      <button className="bg-brandGreen hover:bg-brandOrange px-6 py-3 rounded-lg shadow-lg text-lg font-semibold">
-        Get Started
-      </button>
-    </div>
+    <BrowserRouter>
+      <SEO />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/industries" element={<IndustriesPage />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
