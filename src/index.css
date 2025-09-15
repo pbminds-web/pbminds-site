@@ -2,16 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* small theme helpers used by the components above */
-:root{
-  --muted-foreground: #6b7280; /* slate-500 */
-  --foreground: #0f172a; /* slate-900 */
+/* small helpers used in layout */
+:root {
+  --muted: #94a3b8;
 }
 
-/* utility classes used in the markup */
-.text-muted-foreground { color: var(--muted-foreground); }
-.text-foreground { color: var(--foreground); }
+/* helper classes used in components */
+.text-muted { color: var(--muted); }
 
-/* layout niceties */
 html,body,#root { height: 100%; }
-body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased; }
+body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial; -webkit-font-smoothing: antialiased; }
