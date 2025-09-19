@@ -1,8 +1,8 @@
 import React from "react";
 
 const people = [
-  { name: "Mangala Mali", title: "CEO" },
-  { name: "Mangala Mali", title: "HR Head" }
+  { name: "Mangala ", title: "CEO" },
+  { name: "Mangala ", title: "HR Head" }
 ];
 
 export default function Team(){

@@ -4,7 +4,11 @@ import emailjs from "@emailjs/browser";
 export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
-
+	
+	console.log("SERVICE:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+    console.log("TEMPLATE:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+    console.log("KEY:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+	
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
