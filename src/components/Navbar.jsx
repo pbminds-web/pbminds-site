@@ -12,6 +12,7 @@ export default function Navbar() {
             <NavLink to="/services" className={({isActive})=> isActive ? "font-semibold" : "text-muted"}>Services</NavLink>
             <NavLink to="/case-studies" className={({isActive})=> isActive ? "font-semibold" : "text-muted"}>Case Studies</NavLink>
             <NavLink to="/about" className={({isActive})=> isActive ? "font-semibold" : "text-muted"}>About</NavLink>
+            <NavLink to="/careers" className={({isActive})=> isActive ? "font-semibold" : "text-muted"}>Careers</NavLink>
             <NavLink to="/contact" className={({isActive})=> isActive ? "font-semibold" : "text-muted"}>Contact</NavLink>
           </nav>
           <div className="hidden md:flex">

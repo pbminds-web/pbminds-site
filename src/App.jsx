@@ -9,6 +9,7 @@ import Team from "./components/Team";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Career from "./components/Career";
 
 function Home() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
 			<Route path="/team" element={<Team />} />
 			<Route path="/about" element={<About />} />
 			<Route path="/contact" element={<Contact />} />
+			<Route path="/careers" element={<Career />} />
           </Routes>
         </main>
         <Footer />
