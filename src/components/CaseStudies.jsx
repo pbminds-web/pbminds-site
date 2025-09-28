@@ -26,31 +26,31 @@ const cardVariants = {
 const studies = [
   {
     id: 1,
-    title: "Forecourt POS Modernization",
-    summary: "Improved device uptime and reduced latency.",
-    description: "Modernized legacy point-of-sale systems across multiple locations, implementing real-time monitoring and predictive maintenance.",
+    title: "Connected Vehicle Analytics Platform",
+    summary: "Real-time vehicle telemetry and predictive maintenance system.",
+    description: "Built an IoT-enabled platform that collects and analyzes real-time data from connected vehicles, enabling predictive maintenance and fleet optimization through advanced analytics and machine learning.",
     results: [
-      "99.9% uptime achievement",
-      "60% reduction in transaction latency",
-      "40% decrease in maintenance costs"
+      "85% reduction in unexpected breakdowns",
+      "40% improvement in fuel efficiency",
+      "60% decrease in maintenance costs"
     ],
-    tags: ["IoT", "Cloud", "Analytics"],
-    image: "/images/case-studies/pos-modernization.jpg",
-    alt: "Modern POS system interface"
+    tags: ["IoT", "Analytics", "ML"],
+    image: "/images/case-studies/connected-vehicle-analytics.png",
+    alt: "Connected vehicle analytics dashboard"
   },
   {
     id: 2,
-    title: "Outbound Dialer Optimization",
-    summary: "Improved connect rate and analytics-driven routing.",
-    description: "Implemented ML-driven call routing and timing optimization for outbound contact center operations.",
+    title: "AI-Powered Health Monitoring",
+    summary: "Intelligent health monitoring system with predictive analytics.",
+    description: "Developed an AI-driven health monitoring platform that continuously analyzes patient vitals and medical data to provide early warning alerts and personalized health recommendations.",
     results: [
-      "45% increase in connect rates",
-      "30% improvement in conversion",
-      "Real-time performance analytics"
+      "92% accuracy in health risk prediction",
+      "50% reduction in emergency incidents",
+      "Enhanced patient engagement by 75%"
     ],
-    tags: ["ML", "Analytics", "Integration"],
-    image: "/images/case-studies/dialer-optimization.jpg",
-    alt: "Call center analytics dashboard"
+    tags: ["AI", "Healthcare", "Analytics"],
+    image: "/images/case-studies/ai-health-monitoring.png",
+    alt: "AI health monitoring dashboard"
   },
   {
     id: 3,
@@ -63,22 +63,22 @@ const studies = [
       "50% reduction in hosting costs"
     ],
     tags: ["Microservices", "AWS", "React"],
-    image: "/images/case-studies/ecommerce-project.jpg",
+    image: "/images/case-studies/ecommerce-project.png",
     alt: "Modern e-commerce platform interface"
   },
   {
     id: 4,
-    title: "Mobile Banking App",
-    summary: "Secure, user-friendly mobile banking solution.",
-    description: "Developed comprehensive mobile banking application with advanced security features and intuitive user experience.",
+    title: "Autonomous Fleet Management System",
+    summary: "Intelligent fleet orchestration with real-time route optimization.",
+    description: "Created a comprehensive autonomous fleet management solution that handles vehicle dispatching, route optimization, and real-time monitoring for self-driving vehicle operations.",
     results: [
-      "500K+ active users",
-      "4.8/5 app store rating",
-      "Zero security incidents"
+      "45% improvement in delivery efficiency",
+      "30% reduction in operational costs",
+      "99.8% system reliability"
     ],
-    tags: ["Mobile", "Security", "Banking"],
-    image: "/images/case-studies/mobile-app-project.jpg",
-    alt: "Mobile banking app interface"
+    tags: ["Autonomous", "Fleet", "Optimization"],
+    image: "/images/case-studies/autonomous-fleet-management.png",
+    alt: "Autonomous fleet management interface"
   }
 ];
 
