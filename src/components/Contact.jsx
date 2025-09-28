@@ -210,7 +210,7 @@ export default function Contact() {
                   whileHover={{ x: 5 }}
                 >
                   <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span>contact@pbminds.com</span>
+                  <span>hr@pbminds.com</span>
                 </motion.a>
               </div>
             </div>
