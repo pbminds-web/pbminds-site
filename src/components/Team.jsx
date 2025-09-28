@@ -38,8 +38,9 @@ const people = [
   { 
     id: 1,
     name: "Mangala",
-    title: "CEO",
-    image: "/images/team/mangala.jpg",
+    title: "CEO & Founder",
+    image: "/images/team/ceo-placeholder.jpg",
+    bio: "Visionary leader with 15+ years of experience in software development and business strategy.",
     social: {
       linkedin: "https://linkedin.com/in/mangala",
       twitter: "https://twitter.com/mangala",
@@ -50,10 +51,33 @@ const people = [
     id: 2,
     name: "Mangala",
     title: "HR Head",
-    image: "/images/team/mangala-hr.jpg",
+    image: "/images/team/hr-placeholder.jpg",
+    bio: "People-focused leader building diverse, high-performing teams and fostering company culture.",
     social: {
       linkedin: "https://linkedin.com/in/mangala-hr",
       twitter: "https://twitter.com/mangala_hr"
+    }
+  },
+  { 
+    id: 3,
+    name: "Senior Developer",
+    title: "Technical Lead",
+    image: "/images/team/lead-dev-placeholder.jpg",
+    bio: "Full-stack expert specializing in scalable architectures and modern development practices.",
+    social: {
+      linkedin: "https://linkedin.com/in/tech-lead",
+      github: "https://github.com/tech-lead"
+    }
+  },
+  { 
+    id: 4,
+    name: "Design Lead",
+    title: "UX/UI Designer",
+    image: "/images/team/designer-placeholder.jpg",
+    bio: "Creative professional crafting intuitive user experiences and beautiful interfaces.",
+    social: {
+      linkedin: "https://linkedin.com/in/design-lead",
+      twitter: "https://twitter.com/design_lead"
     }
   }
 ];

@@ -26,29 +26,59 @@ const cardVariants = {
 const studies = [
   {
     id: 1,
-    title: "Forecourt POS Modernization",
-    summary: "Improved device uptime and reduced latency.",
-    description: "Modernized legacy point-of-sale systems across multiple locations, implementing real-time monitoring and predictive maintenance.",
+    title: "Connected Vehicle Analytics Platform",
+    summary: "Real-time vehicle telemetry and predictive maintenance system.",
+    description: "Built an IoT-enabled platform that collects and analyzes real-time data from connected vehicles, enabling predictive maintenance and fleet optimization through advanced analytics and machine learning.",
     results: [
-      "99.9% uptime achievement",
-      "60% reduction in transaction latency",
-      "40% decrease in maintenance costs"
+      "85% reduction in unexpected breakdowns",
+      "40% improvement in fuel efficiency",
+      "60% decrease in maintenance costs"
     ],
-    tags: ["IoT", "Cloud", "Analytics"],
-    image: "/images/case-studies/pos-modernization.jpg"
+    tags: ["IoT", "Analytics", "ML"],
+    image: "/images/case-studies/connected-vehicle-analytics.png",
+    alt: "Connected vehicle analytics dashboard"
   },
   {
     id: 2,
-    title: "Outbound Dialer Optimization",
-    summary: "Improved connect rate and analytics-driven routing.",
-    description: "Implemented ML-driven call routing and timing optimization for outbound contact center operations.",
+    title: "AI-Powered Health Monitoring",
+    summary: "Intelligent health monitoring system with predictive analytics.",
+    description: "Developed an AI-driven health monitoring platform that continuously analyzes patient vitals and medical data to provide early warning alerts and personalized health recommendations.",
     results: [
-      "45% increase in connect rates",
-      "30% improvement in conversion",
-      "Real-time performance analytics"
+      "92% accuracy in health risk prediction",
+      "50% reduction in emergency incidents",
+      "Enhanced patient engagement by 75%"
     ],
-    tags: ["ML", "Analytics", "Integration"],
-    image: "/images/case-studies/dialer-optimization.jpg"
+    tags: ["AI", "Healthcare", "Analytics"],
+    image: "/images/case-studies/ai-health-monitoring.png",
+    alt: "AI health monitoring dashboard"
+  },
+  {
+    id: 3,
+    title: "E-commerce Platform Migration",
+    summary: "Scalable microservices architecture with improved performance.",
+    description: "Migrated monolithic e-commerce platform to modern microservices architecture with enhanced scalability and performance.",
+    results: [
+      "300% improvement in page load times",
+      "99.99% platform availability",
+      "50% reduction in hosting costs"
+    ],
+    tags: ["Microservices", "AWS", "React"],
+    image: "/images/case-studies/ecommerce-project.png",
+    alt: "Modern e-commerce platform interface"
+  },
+  {
+    id: 4,
+    title: "Autonomous Fleet Management System",
+    summary: "Intelligent fleet orchestration with real-time route optimization.",
+    description: "Created a comprehensive autonomous fleet management solution that handles vehicle dispatching, route optimization, and real-time monitoring for self-driving vehicle operations.",
+    results: [
+      "45% improvement in delivery efficiency",
+      "30% reduction in operational costs",
+      "99.8% system reliability"
+    ],
+    tags: ["Autonomous", "Fleet", "Optimization"],
+    image: "/images/case-studies/autonomous-fleet-management.png",
+    alt: "Autonomous fleet management interface"
   }
 ];
 
@@ -90,6 +120,26 @@ export default function CaseStudies() {
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-50 to-accent-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 <div className="relative z-10">
+                  {/* Image Section */}
+                  <div className="mb-4 rounded-xl overflow-hidden">
+                    <img 
+                      src={study.image} 
+                      alt={study.alt}
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'block';
+                      }}
+                    />
+                    {/* Fallback gradient */}
+                    <div 
+                      className="w-full h-48 bg-gradient-to-br from-brand-100 to-accent-100 flex items-center justify-center hidden"
+                      style={{ display: 'none' }}
+                    >
+                      <span className="text-brand-600 font-medium">{study.title}</span>
+                    </div>
+                  </div>
+
                   <div className="flex items-start justify-between">
                     <div>
                       <h4 className="font-semibold text-lg text-slate-900 group-hover:text-brand-700 transition-colors duration-300">
