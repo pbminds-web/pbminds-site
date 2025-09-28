@@ -35,7 +35,7 @@ const studies = [
       "40% decrease in maintenance costs"
     ],
     tags: ["IoT", "Cloud", "Analytics"],
-    image: "/images/case-studies/pos-modernization.jpg"
+    image: "/images/case-studies/pos-modernization.svg"
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ const studies = [
       "Real-time performance analytics"
     ],
     tags: ["ML", "Analytics", "Integration"],
-    image: "/images/case-studies/dialer-optimization.jpg"
+    image: "/images/case-studies/dialer-optimization.svg"
   }
 ];
 

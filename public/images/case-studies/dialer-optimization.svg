@@ -1,0 +1,72 @@
+<svg width="600" height="360" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dialerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="360" fill="url(#dialerGrad)" rx="12"/>
+  
+  <!-- Neural network pattern -->
+  <g opacity="0.15">
+    <circle cx="80" cy="60" r="15" fill="#ffffff"/>
+    <circle cx="150" cy="80" r="12" fill="#ffffff"/>
+    <circle cx="220" cy="70" r="18" fill="#ffffff"/>
+    <circle cx="120" cy="140" r="10" fill="#ffffff"/>
+    <circle cx="190" cy="160" r="14" fill="#ffffff"/>
+    <circle cx="260" cy="150" r="16" fill="#ffffff"/>
+    
+    <line x1="80" y1="60" x2="150" y2="80" stroke="#ffffff" stroke-width="2"/>
+    <line x1="150" y1="80" x2="220" y2="70" stroke="#ffffff" stroke-width="2"/>
+    <line x1="80" y1="60" x2="120" y2="140" stroke="#ffffff" stroke-width="2"/>
+    <line x1="220" y1="70" x2="260" y2="150" stroke="#ffffff" stroke-width="2"/>
+    <line x1="190" y1="160" x2="260" y2="150" stroke="#ffffff" stroke-width="2"/>
+  </g>
+  
+  <!-- Main content area -->
+  <rect x="100" y="80" width="400" height="200" fill="#ffffff" opacity="0.95" rx="16" filter="url(#glow2)"/>
+  
+  <!-- Phone/dialer illustration -->
+  <rect x="140" y="120" width="80" height="120" fill="#7c3aed" rx="12"/>
+  <rect x="150" y="130" width="60" height="40" fill="#ffffff" rx="4"/>
+  
+  <!-- Dial pad -->
+  <circle cx="165" cy="185" r="6" fill="#ffffff"/>
+  <circle cx="180" cy="185" r="6" fill="#ffffff"/>
+  <circle cx="195" cy="185" r="6" fill="#ffffff"/>
+  <circle cx="165" cy="200" r="6" fill="#ffffff"/>
+  <circle cx="180" cy="200" r="6" fill="#ffffff"/>
+  <circle cx="195" cy="200" r="6" fill="#ffffff"/>
+  <circle cx="165" cy="215" r="6" fill="#ffffff"/>
+  <circle cx="180" cy="215" r="6" fill="#ffffff"/>
+  <circle cx="195" cy="215" r="6" fill="#ffffff"/>
+  
+  <!-- Analytics dashboard -->
+  <rect x="280" y="120" width="180" height="120" fill="#a855f7" rx="8"/>
+  <rect x="290" y="130" width="160" height="30" fill="#ffffff" rx="4"/>
+  
+  <!-- Chart bars -->
+  <rect x="300" y="175" width="15" height="25" fill="#ffffff" rx="2"/>
+  <rect x="320" y="165" width="15" height="35" fill="#ffffff" rx="2"/>
+  <rect x="340" y="155" width="15" height="45" fill="#ffffff" rx="2"/>
+  <rect x="360" y="170" width="15" height="30" fill="#ffffff" rx="2"/>
+  <rect x="380" y="160" width="15" height="40" fill="#ffffff" rx="2"/>
+  <rect x="400" y="150" width="15" height="50" fill="#ffffff" rx="2"/>
+  <rect x="420" y="145" width="15" height="55" fill="#ffffff" rx="2"/>
+  
+  <!-- Connection lines -->
+  <path d="M220 180 L280 180" stroke="#ffffff" stroke-width="3" opacity="0.8" stroke-dasharray="5,5"/>
+  
+  <!-- Title -->
+  <text x="300" y="320" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="26" font-weight="bold">DIALER OPTIMIZATION</text>
+  <text x="300" y="345" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" opacity="0.9">ML • Analytics • Integration</text>
+</svg>

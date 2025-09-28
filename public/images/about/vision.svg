@@ -1,0 +1,54 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="visionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow4">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#visionGrad)" opacity="0.9"/>
+  
+  <!-- Globe/World -->
+  <circle cx="100" cy="100" r="40" fill="#ffffff" filter="url(#glow4)"/>
+  
+  <!-- Continents -->
+  <path d="M75 90 Q85 85 95 90 Q90 100 85 95 Q75 95 75 90 Z" fill="#059669" opacity="0.7"/>
+  <path d="M105 85 Q115 80 125 90 Q120 95 110 90 Q105 90 105 85 Z" fill="#059669" opacity="0.7"/>
+  <path d="M80 110 Q90 105 100 115 Q95 120 85 115 Q80 115 80 110 Z" fill="#059669" opacity="0.7"/>
+  
+  <!-- Connecting lines radiating outward -->
+  <g opacity="0.4" stroke="#ffffff" stroke-width="2">
+    <line x1="100" y1="60" x2="100" y2="30"/>
+    <line x1="130" y1="80" x2="150" y2="60"/>
+    <line x1="140" y1="100" x2="170" y2="100"/>
+    <line x1="130" y1="120" x2="150" y2="140"/>
+    <line x1="100" y1="140" x2="100" y2="170"/>
+    <line x1="70" y1="120" x2="50" y2="140"/>
+    <line x1="60" y1="100" x2="30" y2="100"/>
+    <line x1="70" y1="80" x2="50" y2="60"/>
+  </g>
+  
+  <!-- Connection nodes -->
+  <g fill="#ffffff">
+    <circle cx="100" cy="30" r="4"/>
+    <circle cx="150" cy="60" r="4"/>
+    <circle cx="170" cy="100" r="4"/>
+    <circle cx="150" cy="140" r="4"/>
+    <circle cx="100" cy="170" r="4"/>
+    <circle cx="50" cy="140" r="4"/>
+    <circle cx="30" cy="100" r="4"/>
+    <circle cx="50" cy="60" r="4"/>
+  </g>
+  
+  <!-- Center highlight -->
+  <circle cx="100" cy="100" r="25" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+  <circle cx="100" cy="100" r="15" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.8"/>
+</svg>

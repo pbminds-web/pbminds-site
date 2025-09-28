@@ -39,7 +39,7 @@ const people = [
     id: 1,
     name: "Mangala",
     title: "CEO",
-    image: "/images/team/mangala.jpg",
+    image: "/images/team/mangala.svg",
     social: {
       linkedin: "https://linkedin.com/in/mangala",
       twitter: "https://twitter.com/mangala",
@@ -50,7 +50,7 @@ const people = [
     id: 2,
     name: "Mangala",
     title: "HR Head",
-    image: "/images/team/mangala-hr.jpg",
+    image: "/images/team/mangala-hr.svg",
     social: {
       linkedin: "https://linkedin.com/in/mangala-hr",
       twitter: "https://twitter.com/mangala_hr"
