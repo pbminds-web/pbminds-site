@@ -1,9 +1,9 @@
+/* Import custom styles - must be first */
+@import './styles/images.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Import custom styles */
-@import './styles/images.css';
 
 /* Custom Properties */
 :root {
