@@ -29,7 +29,7 @@ const services = [
     icon: <Code2 className="w-6 h-6" />, 
     title: "Custom Software", 
     text: "Greenfield builds, enterprise systems, microservices.",
-    image: "/images/services/web-development.jpg",
+    image: "/images/services/web-development.png",
     alt: "Web development and custom software solutions"
   },
   { 
@@ -37,7 +37,7 @@ const services = [
     icon: <Cloud className="w-6 h-6" />, 
     title: "Cloud & DevOps", 
     text: "K8s, CI/CD, IaC, observability and cost control.",
-    image: "/images/services/cloud-solutions.jpg",
+    image: "/images/services/cloud-solutions.png",
     alt: "Cloud infrastructure and DevOps solutions"
   },
   { 
@@ -45,7 +45,7 @@ const services = [
     icon: <Cpu className="w-6 h-6" />, 
     title: "AI & Data", 
     text: "ML pipelines, RAG, and automation that augments teams.",
-    image: "/images/services/ai-ml.jpg",
+    image: "/images/services/ai-ml.png",
     alt: "AI and machine learning solutions"
   },
   { 
@@ -53,7 +53,7 @@ const services = [
     icon: <ShieldCheck className="w-6 h-6" />, 
     title: "Security", 
     text: "Threat modeling, SAST/DAST and compliance.",
-    image: "/images/services/security.jpg",
+    image: "/images/services/security.png",
     alt: "Cybersecurity and compliance solutions"
   }
 ];
