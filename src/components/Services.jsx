@@ -24,10 +24,38 @@ const cardVariants = {
 };
 
 const services = [
-  { id: 1, icon: <Code2 className="w-6 h-6" />, title: "Custom Software", text: "Greenfield builds, enterprise systems, microservices." },
-  { id: 2, icon: <Cloud className="w-6 h-6" />, title: "Cloud & DevOps", text: "K8s, CI/CD, IaC, observability and cost control." },
-  { id: 3, icon: <Cpu className="w-6 h-6" />, title: "AI & Data", text: "ML pipelines, RAG, and automation that augments teams." },
-  { id: 4, icon: <ShieldCheck className="w-6 h-6" />, title: "Security", text: "Threat modeling, SAST/DAST and compliance." }
+  { 
+    id: 1, 
+    icon: <Code2 className="w-6 h-6" />, 
+    title: "Custom Software", 
+    text: "Greenfield builds, enterprise systems, microservices.",
+    image: "/images/services/web-development.jpg",
+    alt: "Web development and custom software solutions"
+  },
+  { 
+    id: 2, 
+    icon: <Cloud className="w-6 h-6" />, 
+    title: "Cloud & DevOps", 
+    text: "K8s, CI/CD, IaC, observability and cost control.",
+    image: "/images/services/cloud-solutions.jpg",
+    alt: "Cloud infrastructure and DevOps solutions"
+  },
+  { 
+    id: 3, 
+    icon: <Cpu className="w-6 h-6" />, 
+    title: "AI & Data", 
+    text: "ML pipelines, RAG, and automation that augments teams.",
+    image: "/images/services/ai-ml.jpg",
+    alt: "AI and machine learning solutions"
+  },
+  { 
+    id: 4, 
+    icon: <ShieldCheck className="w-6 h-6" />, 
+    title: "Security", 
+    text: "Threat modeling, SAST/DAST and compliance.",
+    image: "/images/services/security.jpg",
+    alt: "Cybersecurity and compliance solutions"
+  }
 ];
 
 export default function Services() {
@@ -59,27 +87,57 @@ export default function Services() {
               key={service.id}
               variants={cardVariants}
               whileHover={{ 
-                y: -5, 
-                scale: 1.02,
-                transition: { duration: 0.2 }
+                y: -8, 
+                scale: 1.03,
+                transition: { duration: 0.3 }
               }}
-              className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-brand-100 relative"
+              className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-brand-200 relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-50 to-accent-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-              <div className="relative z-10">
-                <motion.div 
-                  className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-brand-50 text-brand-700 mb-4"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
-                >
-                  {service.icon}
-                </motion.div>
-                <h4 className="font-semibold text-lg text-slate-900 group-hover:text-brand-700 transition-colors duration-300">
-                  {service.title}
-                </h4>
-                <p className="mt-2 text-sm text-muted">
+              {/* Image Section */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.alt}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  onError={(e) => {
+                    // Fallback to gradient background if image doesn't exist
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                {/* Fallback gradient background */}
+                <div 
+                  className="absolute inset-0 bg-gradient-to-br from-brand-100 to-accent-100 hidden"
+                  style={{ display: 'none' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              
+              {/* Content Section */}
+              <div className="p-6 relative">
+                <div className="flex items-center gap-3 mb-3">
+                  <motion.div 
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-50 text-brand-700"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                  >
+                    {service.icon}
+                  </motion.div>
+                  <h4 className="font-semibold text-lg text-slate-900 group-hover:text-brand-700 transition-colors duration-300">
+                    {service.title}
+                  </h4>
+                </div>
+                <p className="text-sm text-muted leading-relaxed">
                   {service.text}
                 </p>
+                
+                {/* Learn More Button */}
+                <motion.button
+                  className="mt-4 text-brand-600 hover:text-brand-700 text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  whileHover={{ x: 5 }}
+                >
+                  Learn More →
+                </motion.button>
               </div>
             </motion.div>
           ))}

@@ -35,7 +35,8 @@ const studies = [
       "40% decrease in maintenance costs"
     ],
     tags: ["IoT", "Cloud", "Analytics"],
-    image: "/images/case-studies/pos-modernization.jpg"
+    image: "/images/case-studies/pos-modernization.jpg",
+    alt: "Modern POS system interface"
   },
   {
     id: 2,
@@ -48,7 +49,36 @@ const studies = [
       "Real-time performance analytics"
     ],
     tags: ["ML", "Analytics", "Integration"],
-    image: "/images/case-studies/dialer-optimization.jpg"
+    image: "/images/case-studies/dialer-optimization.jpg",
+    alt: "Call center analytics dashboard"
+  },
+  {
+    id: 3,
+    title: "E-commerce Platform Migration",
+    summary: "Scalable microservices architecture with improved performance.",
+    description: "Migrated monolithic e-commerce platform to modern microservices architecture with enhanced scalability and performance.",
+    results: [
+      "300% improvement in page load times",
+      "99.99% platform availability",
+      "50% reduction in hosting costs"
+    ],
+    tags: ["Microservices", "AWS", "React"],
+    image: "/images/case-studies/ecommerce-project.jpg",
+    alt: "Modern e-commerce platform interface"
+  },
+  {
+    id: 4,
+    title: "Mobile Banking App",
+    summary: "Secure, user-friendly mobile banking solution.",
+    description: "Developed comprehensive mobile banking application with advanced security features and intuitive user experience.",
+    results: [
+      "500K+ active users",
+      "4.8/5 app store rating",
+      "Zero security incidents"
+    ],
+    tags: ["Mobile", "Security", "Banking"],
+    image: "/images/case-studies/mobile-app-project.jpg",
+    alt: "Mobile banking app interface"
   }
 ];
 
@@ -90,6 +120,26 @@ export default function CaseStudies() {
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-50 to-accent-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 <div className="relative z-10">
+                  {/* Image Section */}
+                  <div className="mb-4 rounded-xl overflow-hidden">
+                    <img 
+                      src={study.image} 
+                      alt={study.alt}
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'block';
+                      }}
+                    />
+                    {/* Fallback gradient */}
+                    <div 
+                      className="w-full h-48 bg-gradient-to-br from-brand-100 to-accent-100 flex items-center justify-center hidden"
+                      style={{ display: 'none' }}
+                    >
+                      <span className="text-brand-600 font-medium">{study.title}</span>
+                    </div>
+                  </div>
+
                   <div className="flex items-start justify-between">
                     <div>
                       <h4 className="font-semibold text-lg text-slate-900 group-hover:text-brand-700 transition-colors duration-300">
