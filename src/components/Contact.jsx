@@ -32,44 +32,39 @@ export default function Contact() {
   const [formStatus, setFormStatus] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const sendEmail = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    try {
-      // Get reCAPTCHA token if grecaptcha is available
-      let recaptchaToken = null;
-      if (window.grecaptcha) {
-        try {
-          recaptchaToken = await window.grecaptcha.execute();
-        } catch (error) {
-          console.warn('reCAPTCHA not available, proceeding without it:', error);
-        }
-      }
+    // Use emailjs.send instead of sendForm to have better control
+    const templateParams = {
+      user_name: e.target.user_name.value,
+      user_email: e.target.user_email.value,
+      message: e.target.message.value,
+    };
 
-      // Send email with or without reCAPTCHA
-      const response = await emailjs.sendForm(
+    emailjs
+      .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        e.target,
+        templateParams,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
-      
-      console.log("Message Sent!", response.text);
-      setFormStatus('success');
-      e.target.reset();
-      
-      // Reset reCAPTCHA if it exists
-      if (window.grecaptcha) {
-        window.grecaptcha.reset();
-      }
-    } catch (error) {
-      console.error("Failed...", error);
-      setFormStatus('error');
-    } finally {
-      setIsSubmitting(false);
-      setTimeout(() => setFormStatus(null), 5000);
-    }
+      )
+      .then(
+        (result) => {
+          console.log("Message Sent!", result.text);
+          setFormStatus('success');
+          e.target.reset();
+        },
+        (error) => {
+          console.error("Failed...", error);
+          setFormStatus('error');
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+        setTimeout(() => setFormStatus(null), 5000);
+      });
   };
 
   return (
