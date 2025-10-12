@@ -1,0 +1,6 @@
+# robots.txt for https://pbmindstech.com/
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pbmindstech.com/sitemap.xml
