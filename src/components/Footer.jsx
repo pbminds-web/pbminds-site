@@ -101,12 +101,12 @@ export default function Footer() {
             <ul className="space-y-3">
               <motion.li>
                 <motion.a
-                  href="mailto:hr@pbmindstech.com"
+                  href="mailto:contact@pbmindstech.com"
                   className="flex items-center gap-2 text-slate-400 hover:text-brand-400 transition-colors duration-200"
                   whileHover={{ x: 5 }}
                 >
                   <Mail className="w-4 h-4" />
-                  <span>hr@pbmindstech.com</span>
+                  <span>contact@pbmindstech.com</span>
                 </motion.a>
               </motion.li>
               <motion.li>

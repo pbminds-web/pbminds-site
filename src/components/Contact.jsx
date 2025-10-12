@@ -205,12 +205,12 @@ export default function Contact() {
                   <span>+91-7619304857</span>
                 </motion.a>
                 <motion.a
-                  href="mailto:hr@pbmindstech.com"
+                  href="mailto:contact@pbmindstech.com"
                   className="flex items-center gap-4 text-slate-600 hover:text-brand-600 transition-colors duration-200"
                   whileHover={{ x: 5 }}
                 >
                   <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span>hr@pbminds.com</span>
+                  <span>contact@pbmindstech.com</span>
                 </motion.a>
               </div>
             </div>
