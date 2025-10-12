@@ -1,6 +1,6 @@
-# robots.txt for https://pbminds.com/
+# robots.txt for https://pbmindstech.com/
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://pbminds.com/sitemap.xml
+Sitemap: https://pbmindstech.com/sitemap.xml
