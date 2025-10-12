@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Test</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <h1>EmailJS Configuration Test</h1>
+    
+    <div id="results" style="padding: 20px; margin: 20px; border: 1px solid #ccc;">
+        <h2>Test Results:</h2>
+        <pre id="output">Click the button below to test...</pre>
+    </div>
+
+    <form id="testForm">
+        <input type="text" name="user_name" value="Test User" placeholder="Name"><br><br>
+        <input type="email" name="user_email" value="test@example.com" placeholder="Email"><br><br>
+        <textarea name="message" placeholder="Message">This is a test message</textarea><br><br>
+        <button type="submit">Send Test Email</button>
+    </form>
+
+    <script>
+        // Your credentials
+        const SERVICE_ID = 'service_j1engff';
+        const TEMPLATE_ID = 'template_ysu2rmz';
+        const PUBLIC_KEY = '0RgSeE5ektOPuP7R6';
+
+        const output = document.getElementById('output');
+
+        // Display configuration
+        output.textContent = `Configuration:
+Service ID: ${SERVICE_ID}
+Template ID: ${TEMPLATE_ID}
+Public Key: ${PUBLIC_KEY}
+
+Status: Ready to test...`;
+
+        // Initialize EmailJS
+        emailjs.init(PUBLIC_KEY);
+
+        // Form submission
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            output.textContent = 'Sending...';
+            
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
+                .then(function(response) {
+                    output.textContent = `✅ SUCCESS!\n\nStatus: ${response.status}\nText: ${response.text}\n\nThe credentials are CORRECT!`;
+                    output.style.color = 'green';
+                }, function(error) {
+                    output.textContent = `❌ ERROR!\n\nError: ${JSON.stringify(error, null, 2)}\n\nPlease check:\n1. Service ID is correct\n2. Template ID is correct\n3. Public Key is correct\n4. EmailJS service is active\n5. Template has fields: user_name, user_email, message`;
+                    output.style.color = 'red';
+                });
+        });
+    </script>
+</body>
+</html>

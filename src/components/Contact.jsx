@@ -32,32 +32,44 @@ export default function Contact() {
   const [formStatus, setFormStatus] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    emailjs
-      .sendForm(
+    try {
+      // Get reCAPTCHA token if grecaptcha is available
+      let recaptchaToken = null;
+      if (window.grecaptcha) {
+        try {
+          recaptchaToken = await window.grecaptcha.execute();
+        } catch (error) {
+          console.warn('reCAPTCHA not available, proceeding without it:', error);
+        }
+      }
+
+      // Send email with or without reCAPTCHA
+      const response = await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         e.target,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log("Message Sent!", result.text);
-          setFormStatus('success');
-          e.target.reset();
-        },
-        (error) => {
-          console.error("Failed...", error.text);
-          setFormStatus('error');
-        }
-      )
-      .finally(() => {
-        setIsSubmitting(false);
-        setTimeout(() => setFormStatus(null), 5000);
-      });
+      );
+      
+      console.log("Message Sent!", response.text);
+      setFormStatus('success');
+      e.target.reset();
+      
+      // Reset reCAPTCHA if it exists
+      if (window.grecaptcha) {
+        window.grecaptcha.reset();
+      }
+    } catch (error) {
+      console.error("Failed...", error);
+      setFormStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setFormStatus(null), 5000);
+    }
   };
 
   return (
