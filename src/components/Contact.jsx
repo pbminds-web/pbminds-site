@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { Send, MapPin, Phone, Mail, CheckCircle, XCircle } from "lucide-react";
+
+// Initialize EmailJS with your public key
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -43,6 +46,14 @@ export default function Contact() {
       message: e.target.message.value,
     };
 
+    // Debug logging
+    console.log('=== EmailJS Debug Info ===');
+    console.log('Service ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
+    console.log('Template ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+    console.log('Public Key:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    console.log('Template Params:', templateParams);
+    console.log('EmailJS initialized:', emailjs ? 'YES' : 'NO');
+
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -53,11 +64,15 @@ export default function Contact() {
       .then(
         (result) => {
           console.log("Message Sent!", result.text);
+          console.log("Full response:", result);
           setFormStatus('success');
           e.target.reset();
         },
         (error) => {
           console.error("Failed...", error);
+          console.error("Error text:", error.text);
+          console.error("Error status:", error.status);
+          console.error("Full error object:", JSON.stringify(error, null, 2));
           setFormStatus('error');
         }
       )
