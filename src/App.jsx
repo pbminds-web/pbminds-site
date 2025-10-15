@@ -49,6 +49,49 @@ function CaseStudiesPage() {
   return (
     <>
       <CaseStudies />
+      <Services />
+      <Contact />
+    </>
+  );
+}
+
+function TeamPage() {
+  return (
+    <>
+      <Team />
+      <About />
+      <Contact />
+    </>
+  );
+}
+
+function FeaturesPage() {
+  return (
+    <>
+      <Features />
+      <Services />
+      <Contact />
+    </>
+  );
+}
+
+function CareersPage() {
+  return (
+    <>
+      <Career />
+      <About />
+      <Team />
+      <Contact />
+    </>
+  );
+}
+
+function WhatWeDoPage() {
+  return (
+    <>
+      <Services />
+      <Features />
+      <CaseStudies />
       <Contact />
     </>
   );
@@ -85,12 +128,13 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<ServicesPage />} />
-            <Route path="/features" element={<Features />} />
+            <Route path="/features" element={<FeaturesPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/team" element={<Team />} />
+            <Route path="/team" element={<TeamPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/careers" element={<Career />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/what-we-do" element={<WhatWeDoPage />} />
           </Routes>
         </main>
         <Footer />
