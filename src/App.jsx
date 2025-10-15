@@ -57,9 +57,9 @@ function CaseStudiesPage() {
 function ContactPage() {
   return (
     <>
+      <Contact />
       <About />
       <Team />
-      <Contact />
     </>
   );
 }
