@@ -26,9 +26,19 @@ function Home() {
 }
 
 function AboutPage() {
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <>
-      <About />
+      <div ref={aboutRef}>
+        <About />
+      </div>
       <Team />
       <Contact />
     </>
@@ -36,9 +46,19 @@ function AboutPage() {
 }
 
 function ServicesPage() {
+  const servicesRef = useRef(null);
+
+  useEffect(() => {
+    if (servicesRef.current) {
+      servicesRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <>
-      <Services />
+      <div ref={servicesRef}>
+        <Services />
+      </div>
       <Features />
       <Contact />
     </>
@@ -46,9 +66,19 @@ function ServicesPage() {
 }
 
 function CaseStudiesPage() {
+  const caseStudiesRef = useRef(null);
+
+  useEffect(() => {
+    if (caseStudiesRef.current) {
+      caseStudiesRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <>
-      <CaseStudies />
+      <div ref={caseStudiesRef}>
+        <CaseStudies />
+      </div>
       <Services />
       <Contact />
     </>
@@ -56,9 +86,19 @@ function CaseStudiesPage() {
 }
 
 function TeamPage() {
+  const teamRef = useRef(null);
+
+  useEffect(() => {
+    if (teamRef.current) {
+      teamRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <>
-      <Team />
+      <div ref={teamRef}>
+        <Team />
+      </div>
       <About />
       <Contact />
     </>
@@ -66,9 +106,19 @@ function TeamPage() {
 }
 
 function FeaturesPage() {
+  const featuresRef = useRef(null);
+
+  useEffect(() => {
+    if (featuresRef.current) {
+      featuresRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <>
-      <Features />
+      <div ref={featuresRef}>
+        <Features />
+      </div>
       <Services />
       <Contact />
     </>
@@ -76,9 +126,19 @@ function FeaturesPage() {
 }
 
 function CareersPage() {
+  const careersRef = useRef(null);
+
+  useEffect(() => {
+    if (careersRef.current) {
+      careersRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <>
-      <Career />
+      <div ref={careersRef}>
+        <Career />
+      </div>
       <About />
       <Team />
       <Contact />
@@ -87,9 +147,19 @@ function CareersPage() {
 }
 
 function WhatWeDoPage() {
+  const whatWeDoRef = useRef(null);
+
+  useEffect(() => {
+    if (whatWeDoRef.current) {
+      whatWeDoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <>
-      <Services />
+      <div ref={whatWeDoRef}>
+        <Services />
+      </div>
       <Features />
       <CaseStudies />
       <Contact />
