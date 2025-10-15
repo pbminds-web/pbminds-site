@@ -40,7 +40,7 @@ const people = [
     name: "Mangala",
     title: "CEO & Founder",
     image: "/images/team/ceo-placeholder.jpg",
-    bio: "Visionary leader with 15+ years of experience in software development and business strategy.",
+    bio: "Visionary entrepreneur with 15+ years of experience driving innovation in software development, cloud architecture, and digital transformation. Leading PBMinds with a passion for excellence and client success.",
     social: {
       linkedin: "https://linkedin.com/in/mangala",
       twitter: "https://twitter.com/mangala",
@@ -49,10 +49,10 @@ const people = [
   },
   { 
     id: 2,
-    name: "Mangala",
+    name: "John",
     title: "HR Head",
     image: "/images/team/hr-placeholder.jpg",
-    bio: "People-focused leader building diverse, high-performing teams and fostering company culture.",
+    bio: "Strategic HR professional dedicated to building world-class teams, fostering inclusive culture, and developing talent. Expertise in recruitment, employee engagement, and organizational development.",
     social: {
       linkedin: "https://linkedin.com/in/mangala-hr",
       twitter: "https://twitter.com/mangala_hr"
@@ -60,10 +60,10 @@ const people = [
   },
   { 
     id: 3,
-    name: "Senior Developer",
+    name: "Prashanth",
     title: "Technical Lead",
     image: "/images/team/lead-dev-placeholder.jpg",
-    bio: "Full-stack expert specializing in scalable architectures and modern development practices.",
+    bio: "Full-stack architect with deep expertise in microservices, cloud infrastructure, and DevOps. Leading technical excellence through innovative solutions, mentoring developers, and ensuring scalable system design.",
     social: {
       linkedin: "https://linkedin.com/in/tech-lead",
       github: "https://github.com/tech-lead"
@@ -71,10 +71,10 @@ const people = [
   },
   { 
     id: 4,
-    name: "Design Lead",
-    title: "UX/UI Designer",
+    name: "Amaresh",
+    title: "Adviser",
     image: "/images/team/designer-placeholder.jpg",
-    bio: "Creative professional crafting intuitive user experiences and beautiful interfaces.",
+    bio: "Seasoned technology advisor with extensive industry experience. Provides strategic guidance on business growth, technology trends, and market expansion. Instrumental in shaping PBMinds' vision and direction.",
     social: {
       linkedin: "https://linkedin.com/in/design-lead",
       twitter: "https://twitter.com/design_lead"
