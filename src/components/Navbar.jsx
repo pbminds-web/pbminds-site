@@ -32,28 +32,28 @@ export default function Navbar() {
         {
           title: "Development Services",
           items: [
-            { icon: Code, label: "Custom Software Development", description: "Tailored solutions for your business", to: "/services#custom-software" },
-            { icon: Cloud, label: "Web Application Development", description: "Modern, scalable web apps", to: "/services#web-apps" },
-            { icon: Code, label: "Mobile App Development", description: "iOS and Android applications", to: "/services#mobile-apps" },
-            { icon: Cog, label: "Microservices Architecture", description: "Scalable distributed systems", to: "/services#microservices" }
+            { icon: Code, label: "Custom Software Development", description: "Tailored solutions for your business", to: "/services" },
+            { icon: Cloud, label: "Web Application Development", description: "Modern, scalable web apps", to: "/services" },
+            { icon: Code, label: "Mobile App Development", description: "iOS and Android applications", to: "/services" },
+            { icon: Cog, label: "Microservices Architecture", description: "Scalable distributed systems", to: "/services" }
           ]
         },
         {
           title: "Cloud & Infrastructure",
           items: [
-            { icon: Cloud, label: "Cloud Infrastructure", description: "AWS, Azure, GCP solutions", to: "/services#cloud" },
-            { icon: Cog, label: "DevOps Solutions", description: "CI/CD and automation", to: "/services#devops" },
-            { icon: Shield, label: "Kubernetes & Docker", description: "Container orchestration", to: "/services#kubernetes" },
-            { icon: Cloud, label: "Cloud Migration", description: "Seamless cloud transitions", to: "/services#migration" }
+            { icon: Cloud, label: "Cloud Infrastructure", description: "AWS, Azure, GCP solutions", to: "/services" },
+            { icon: Cog, label: "DevOps Solutions", description: "CI/CD and automation", to: "/services" },
+            { icon: Shield, label: "Kubernetes & Docker", description: "Container orchestration", to: "/services" },
+            { icon: Cloud, label: "Cloud Migration", description: "Seamless cloud transitions", to: "/services" }
           ]
         },
         {
           title: "AI & Security",
           items: [
-            { icon: Brain, label: "AI & Machine Learning", description: "Intelligent automation", to: "/services#ai-ml" },
-            { icon: Shield, label: "Cybersecurity", description: "Protect your business", to: "/services#security" },
-            { icon: Brain, label: "Data Analytics", description: "Insights from your data", to: "/services#analytics" },
-            { icon: Shield, label: "Security Audits", description: "Comprehensive assessments", to: "/services#audits" }
+            { icon: Brain, label: "AI & Machine Learning", description: "Intelligent automation", to: "/services" },
+            { icon: Shield, label: "Cybersecurity", description: "Protect your business", to: "/services" },
+            { icon: Brain, label: "Data Analytics", description: "Insights from your data", to: "/services" },
+            { icon: Shield, label: "Security Audits", description: "Comprehensive assessments", to: "/services" }
           ]
         }
       ]
@@ -65,7 +65,7 @@ export default function Navbar() {
           title: "About Us",
           items: [
             { icon: Users, label: "About PBMinds", description: "Our story and mission", to: "/about" },
-            { icon: Award, label: "Our Team", description: "Meet the experts", to: "/about#team" },
+            { icon: Award, label: "Our Team", description: "Meet the experts", to: "/team" },
             { icon: Briefcase, label: "Careers", description: "Join our team", to: "/careers" },
             { icon: Award, label: "Case Studies", description: "Success stories", to: "/case-studies" }
           ]
@@ -73,9 +73,9 @@ export default function Navbar() {
         {
           title: "Resources",
           items: [
-            { icon: FileText, label: "Blog", description: "Tech insights and updates", to: "/blog" },
-            { icon: FileText, label: "Documentation", description: "Technical resources", to: "/docs" },
-            { icon: Phone, label: "Support", description: "Get help when you need it", to: "/support" },
+            { icon: FileText, label: "Blog", description: "Tech insights and updates", to: "/" },
+            { icon: FileText, label: "Documentation", description: "Technical resources", to: "/" },
+            { icon: Phone, label: "Support", description: "Get help when you need it", to: "/contact" },
             { icon: Phone, label: "Contact Us", description: "Let's talk", to: "/contact" }
           ]
         }

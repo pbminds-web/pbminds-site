@@ -10,13 +10,14 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Career from "./components/Career";
+import ScrollToTop from "./components/ScrollToTop";
 
 function Home() {
   return (
     <>
       <Hero />
       <Services />
-	   <Features />
+      <Features />
       <CaseStudies />
       <Team />
       <Contact />
@@ -27,18 +28,19 @@ function Home() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="flex min-h-screen flex-col">
         <Navbar />
         <main className="flex-1">
           <Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/services" element={<Services />} />
-			<Route path="/features" element={<Features />} />
-			<Route path="/case-studies" element={<CaseStudies />} />
-			<Route path="/team" element={<Team />} />
-			<Route path="/about" element={<About />} />
-			<Route path="/contact" element={<Contact />} />
-			<Route path="/careers" element={<Career />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/careers" element={<Career />} />
           </Routes>
         </main>
         <Footer />
