@@ -54,6 +54,16 @@ function CaseStudiesPage() {
   );
 }
 
+function ContactPage() {
+  return (
+    <>
+      <Contact />
+      <About />
+      <Team />
+    </>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -68,7 +78,7 @@ export default function App() {
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/team" element={<Team />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/careers" element={<Career />} />
           </Routes>
         </main>
