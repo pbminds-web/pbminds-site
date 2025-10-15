@@ -25,6 +25,35 @@ function Home() {
   );
 }
 
+function AboutPage() {
+  return (
+    <>
+      <About />
+      <Team />
+      <Contact />
+    </>
+  );
+}
+
+function ServicesPage() {
+  return (
+    <>
+      <Services />
+      <Features />
+      <Contact />
+    </>
+  );
+}
+
+function CaseStudiesPage() {
+  return (
+    <>
+      <CaseStudies />
+      <Contact />
+    </>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -34,11 +63,11 @@ export default function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/services" element={<ServicesPage />} />
             <Route path="/features" element={<Features />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/team" element={<Team />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Career />} />
           </Routes>
