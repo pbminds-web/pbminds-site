@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -55,11 +55,22 @@ function CaseStudiesPage() {
 }
 
 function ContactPage() {
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    // Scroll to contact section after page loads
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
   return (
     <>
-      <Contact />
       <About />
       <Team />
+      <div ref={contactRef}>
+        <Contact />
+      </div>
     </>
   );
 }
