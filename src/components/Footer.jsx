@@ -149,26 +149,29 @@ export default function Footer() {
 
         <motion.div 
           variants={itemVariants}
-          className="mt-12 pt-8 border-t border-slate-800 text-slate-400 text-sm flex flex-col md:flex-row justify-between items-center gap-4"
+          className="mt-12 pt-8 border-t border-slate-800 text-slate-400 text-sm"
         >
-          <div>
-            © {new Date().getFullYear()} PBMINDS INDIA PRIVATE LIMITED. All rights reserved.
-          </div>
-          <div className="flex gap-6">
-            <motion.a 
-              href="/privacy"
-              className="hover:text-brand-400 transition-colors duration-200"
-              whileHover={{ x: 2 }}
-            >
-              Privacy Policy
-            </motion.a>
-            <motion.a 
-              href="/terms"
-              className="hover:text-brand-400 transition-colors duration-200"
-              whileHover={{ x: 2 }}
-            >
-              Terms of Service
-            </motion.a>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-center md:text-left">
+              <div>© {new Date().getFullYear()} PBMINDS INDIA PRIVATE LIMITED. All rights reserved.</div>
+              <div className="text-xs text-slate-500 mt-1">CIN: U62020KA2021PTC155428</div>
+            </div>
+            <div className="flex gap-6">
+              <motion.a 
+                href="/privacy"
+                className="hover:text-brand-400 transition-colors duration-200"
+                whileHover={{ x: 2 }}
+              >
+                Privacy Policy
+              </motion.a>
+              <motion.a 
+                href="/terms"
+                className="hover:text-brand-400 transition-colors duration-200"
+                whileHover={{ x: 2 }}
+              >
+                Terms of Service
+              </motion.a>
+            </div>
           </div>
         </motion.div>
       </motion.div>
