@@ -154,7 +154,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <div>© {new Date().getFullYear()} PBMINDS INDIA PRIVATE LIMITED. All rights reserved.</div>
-              <div className="text-xs text-slate-500 mt-1">CIN: U62020KA2021PTC155428</div>
+              <div className="mt-1">CIN: U62020KA2021PTC155428</div>
             </div>
             <div className="flex gap-6">
               <motion.a 
