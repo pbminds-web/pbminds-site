@@ -24,7 +24,7 @@ const itemVariants = {
 };
 
 const socialLinks = [
-  { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com/company/pbminds" },
+  { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/company/pbminds-india-pvt-ltd/" },
   { icon: <Twitter className="w-5 h-5" />, href: "https://twitter.com/pbminds" },
   { icon: <Github className="w-5 h-5" />, href: "https://github.com/pbminds" }
 ];
